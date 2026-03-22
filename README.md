@@ -45,6 +45,22 @@ This prevents overbooking and ensures data consistency.
 
 ---
 
+## 📂 Project Structure
+``` text
+trainServices/
+│
+├── trainServices/
+│   ├── settings.py
+│   ├── urls.py
+│
+├── trainApp/
+│   ├── models.py
+│   ├── serializers.py
+│   ├── views.py
+│   ├── urls.py
+│
+├── manage.py
+```
 ## 🔗 API Endpoints
 
 ### 🚆 Train APIs
