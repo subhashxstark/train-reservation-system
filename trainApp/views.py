@@ -7,13 +7,17 @@ from rest_framework.decorators import api_view
 
 
 # API to find trains based on source, destination and date
-@api_view(['POST'])
+@api_view(['GET', 'POST'])
 def find_trains(request):
+    source = request.GET.get('source')
+    destination = request.GET.get('destination')
+    departure_date = request.GET.get('departure_date')
+
     # Filter trains based on user input
     trains = Train.objects.filter(
-        source=request.data['source'],
-        destination=request.data['destination'],
-        departure_date=request.data['departure_date']
+        source=source,
+        destination=destination,
+        departure_date=departure_date
     )
 
     # Convert queryset to JSON response
