@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-a=w3$fl!zcz8**!e=1eo5v4-3@db+1vv#7=#tzniu!)w6@dwf1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -74,17 +74,20 @@ WSGI_APPLICATION = 'trainServices.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+import os
+
+DB_HOST = os.getenv('DB_HOST', 'localhost')
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'traindb',
         'USER': 'postgres',
         'PASSWORD': 'password',
-        'HOST': 'localhost',
+        'HOST': DB_HOST,
         'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators

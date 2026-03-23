@@ -1,4 +1,30 @@
- 
+# Python
 __pycache__/
 *.pyc
+*.pyo
+
+# Environment
 .env
+
+# Django
+*.log
+db.sqlite3
+media/
+staticfiles/
+
+# PostgreSQL (optional dumps)
+*.sql
+
+# Virtual environment
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Git
+.gitignore
