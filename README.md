@@ -21,6 +21,7 @@ The main focus of this project is to implement **real-time seat tracking, valida
 * ⚠️ Meaningful error responses with available seat information
 * 🧠 Clean code structure with proper separation (models, serializers, views, urls)
 * 📮 Performed API testing using Postman to validate endpoints, debug requests, and ensure accurate data handling
+* 📊 Managed reservation data in PostgreSQL, including passenger ID, train ID, seats booked, and timestamps
 ---
 
 📸 Screenshots
@@ -143,8 +144,9 @@ trainServices/
 
 ### 🔍 Custom Search API
 
-* `GET /trainServices/find_trains/`
+* `GET /trainServices/find_trains/`*
 * `POST /trainServices/find_trains/`
+
   → Filters trains using:
 
   * source
@@ -194,11 +196,12 @@ python manage.py runserver
 
 ```json
 {
-  "id": 3,
-  "seats_booked": 5,
-  "train": 3,
-  "passenger": 1,
-  "available_seats": 5
+    "id": 9,
+    "available_seats": 0,
+    "seats_booked": 60,
+    "created_at": "2026-03-23T08:35:11.722376Z",
+    "train": 4,
+    "passenger": 4
 }
 ```
 
@@ -206,8 +209,12 @@ python manage.py runserver
 
 ```json
 {
-  "error": "Not enough seats available",
-  "available_seats": 2
+    "error": [
+        "Not enough seats available"
+    ],
+    "available_seats": [
+        "0"
+    ]
 }
 ```
 
