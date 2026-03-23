@@ -20,7 +20,7 @@ The main focus of this project is to implement **real-time seat tracking, valida
 * 📡 RESTful API design using Django REST Framework
 * ⚠️ Meaningful error responses with available seat information
 * 🧠 Clean code structure with proper separation (models, serializers, views, urls)
-
+* 📮 Performed API testing using Postman to validate endpoints, debug requests, and ensure accurate data handling
 ---
 
 📸 Screenshots
@@ -78,7 +78,7 @@ Deletes a specific train record from the system using its primary key.
 
 Prevents booking more seats than available by validating seat availability and returning an appropriate error response.
 
-<img width="1920" height="1020" alt="reserervation_train" src="https://github.com/user-attachments/assets/062c08d2-46e9-4886-9256-79fe98a6133c" />
+<img width="1920" height="1020" alt="overbooking_validation" src="https://github.com/user-attachments/assets/bfdf600d-2f81-4a13-86e1-b5c360c0d67e" />
 
 ## 🧠 Core Logic (Important)
 
@@ -97,7 +97,7 @@ This prevents overbooking and ensures data consistency.
 * Python 🐍
 * Django
 * Django REST Framework
-* SQLite (default database)
+* PostgreSQL 
 * Git & GitHub
 
 ---
@@ -122,21 +122,28 @@ trainServices/
 
 ### 🚆 Train APIs
 
-* `GET /trainServices/trains/` → Get all trains
-* `POST /trainServices/trains/` → Create a new train
+* `GET /trainServices/trains/` → Get all trains  
+* `POST /trainServices/trains/` → Create a new train  
+* `PUT/PATCH /trainServices/trains/{id}/` → Update a train using its primary key  
+* `DELETE /trainServices/trains/{id}/` → Delete a train using its primary key  
 
 ### 👤 Passenger APIs
 
-* `GET /trainServices/passengers/` → Get all passengers
-* `POST /trainServices/passengers/` → Add a passenger
+* `GET /trainServices/passengers/` → Get all passengers  
+* `POST /trainServices/passengers/` → Add a passenger  
+* `PUT/PATCH /trainServices/passengers/{id}/` → Update a passenger using its primary key  
+* `DELETE /trainServices/passengers/{id}/` → Delete a passenger using its primary key  
 
 ### 🎟️ Reservation APIs
 
-* `POST /trainServices/reservations/` → Book seats
-* `GET /trainServices/reservations/` → View reservations
+* `POST /trainServices/reservations/` → Book seats  
+* `GET /trainServices/reservations/` → View reservations  
+* `PUT/PATCH /trainServices/reservations/{id}/` → Update a reservation using its primary key  
+* `DELETE /trainServices/reservations/{id}/` → Delete a reservation using its primary key  
 
 ### 🔍 Custom Search API
 
+* `GET /trainServices/find_trains/`
 * `POST /trainServices/find_trains/`
   → Filters trains using:
 
