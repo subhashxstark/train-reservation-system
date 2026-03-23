@@ -23,6 +23,63 @@ The main focus of this project is to implement **real-time seat tracking, valida
 
 ---
 
+📸 Screenshots
+
+📸 API Root / Base Endpoint
+
+Displays the base API endpoints of the Train Services project, including routes for trains, passengers, and reservations.
+
+<img width="1920" height="1020" alt="api_root" src="https://github.com/user-attachments/assets/5c47326d-f73e-495a-b06d-f95ca3f1b3ff" />
+
+📸 Create Train (POST API)
+
+Creates a new train record by sending JSON data to the API, storing train details such as number, name, route, and schedule.
+
+<img width="1920" height="1020" alt="post_train" src="https://github.com/user-attachments/assets/7371e49e-fd81-4dcc-a19e-3e3b25a381bf" />
+
+
+📸 Get All Trains (GET API)
+
+Displays a list of all available trains with their details, retrieved using a GET request from the API.
+
+<img width="1920" height="1020" alt="get_all_trains" src="https://github.com/user-attachments/assets/859a5884-95df-4bea-9c8a-0c06bcda699a" />
+
+📸 Filter / Search Trains (GET API)
+
+Retrieves trains based on search criteria such as source, destination, and departure date using query parameters.
+
+<img width="1920" height="1020" alt="find_trains_filter" src="https://github.com/user-attachments/assets/043c86e5-2671-4fa1-a012-59dbb4c7b793" />
+
+📸 Create Passenger (POST API)
+
+Creates a new passenger record by sending user details such as first name, last name, contact information, and email to the API.
+
+<img width="1920" height="1020" alt="post_passenger" src="https://github.com/user-attachments/assets/3c4992ab-d93a-473e-9d69-bd9a83bee6f9" />
+
+📸 Create Reservation (POST API)
+
+Creates a reservation by linking a passenger to a train, while dynamically updating seat availability and booking details.
+
+<img width="1920" height="1020" alt="reserervation_train" src="https://github.com/user-attachments/assets/e464f4b4-3546-48a3-b826-c51b0ec2a882" />
+
+📸 Update Train (PUT API)
+
+Updates the details of a specific train using its primary key, allowing modification of existing records.
+
+<img width="1920" height="1020" alt="put_train" src="https://github.com/user-attachments/assets/7908a9e2-555c-4d03-9edb-008dd4c18315" />
+
+📸 Delete Train (DELETE API)
+
+Deletes a specific train record from the system using its primary key.
+
+<img width="1920" height="1020" alt="delete_train" src="https://github.com/user-attachments/assets/d75bad3e-0213-4786-8c7b-f29238f679e8" />
+
+📸 Handle Overbooking (Validation)
+
+Prevents booking more seats than available by validating seat availability and returning an appropriate error response.
+
+<img width="1920" height="1020" alt="reserervation_train" src="https://github.com/user-attachments/assets/062c08d2-46e9-4886-9256-79fe98a6133c" />
+
 ## 🧠 Core Logic (Important)
 
 The system dynamically calculates available seats using aggregation:
