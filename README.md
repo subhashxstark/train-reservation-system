@@ -107,17 +107,37 @@ This prevents overbooking and ensures data consistency.
 ``` text
 trainServices/
 │
-├── trainServices/
-│   ├── settings.py
-│   ├── urls.py
-│
 ├── trainApp/
-│   ├── models.py
-│   ├── serializers.py
-│   ├── views.py
-│   ├── urls.py
+│   ├── migrations/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py          # Database models (Train, Passenger, Reservation)
+│   ├── serializers.py     # DRF serializers
+│   ├── views.py           # API views & ViewSets
+│   ├── tests.py
 │
+├── trainServices/
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py        # Project settings
+│   ├── urls.py            # Main URL routing
+│   ├── wsgi.py
+│
+├── screenshots/           # README images
+│   ├── 1_api_root.png
+│   ├── 2_create_train.png
+│   ├── 3_get_all_trains.png
+│   ├── 4_find_trains_filter.png
+│   ├── 5_create_passenger.png
+│   ├── 6_create_reservation_train.png
+│   ├── 7_update_train.png
+│   ├── 8_delete_train.png
+│   ├── 9_overbooking_validation.png
+│
+├── .gitignore
 ├── manage.py
+├── README.md
 ```
 ## 🔗 API Endpoints
 
