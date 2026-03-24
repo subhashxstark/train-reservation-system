@@ -1,5 +1,8 @@
 # 🚆 Train Reservation System (Backend API)
 
+## 🌐 Live Application
+http://18.61.157.201:8000/trainServices/
+
 ## 📌 Project Overview
 
 This project is a backend system built using **Django** and **Django REST Framework** that simulates a real-world train reservation system.
@@ -248,6 +251,43 @@ python manage.py runserver
 * Improved debugging and problem-solving skills
 * Designed clean and scalable REST APIs
 
+---
+
+## 🐳 Docker Setup
+
+This project is containerized using Docker to ensure a consistent environment and smooth deployment process.
+
+🔧 Steps Performed
+
+* Created a Dockerfile for the Django REST API
+* Installed required dependencies using requirements.txt
+* Configured the application to run using Gunicorn
+* Connected the application to PostgreSQL database
+* Exposed the application on port 8000
+---
+
+▶️ Run with Docker
+
+docker build -t trainservices .
+
+docker run -d -p 8000:8000 trainservices
+
+---
+## ☁️ AWS EC2 Deployment
+
+The application is deployed on an AWS EC2 instance and is accessible via a public IP.
+
+---
+🔧 Deployment Steps
+
+* Launched an Ubuntu EC2 instance
+* Installed Docker and PostgreSQL on the server
+* Configured Security Groups (ports 22 for SSH and 8000 for application)
+* Cloned project from GitHub repository
+* Built Docker image on EC2
+* Ran Docker container in detached mode
+* Connected Django REST API to PostgreSQL running on EC2
+* Performed migrations inside Docker container
 ---
 
 ## 🚀 Future Improvements
