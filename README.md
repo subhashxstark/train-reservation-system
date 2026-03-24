@@ -1,6 +1,6 @@
 # 🚆 Train Reservation System (Backend API)
 
-## 🌐 Live Application
+**🌐 Live Application:**
 http://18.61.157.201:8000/trainServices/
 
 ## 📌 Project Overview
@@ -103,6 +103,8 @@ This prevents overbooking and ensures data consistency.
 * Django REST Framework
 * PostgreSQL 
 * Git & GitHub
+* Docker
+* AWS EC2
 
 ---
 
