@@ -123,11 +123,11 @@ trainServices/
 ├── trainServices/
 │   ├── __init__.py
 │   ├── asgi.py
-│   ├── settings.py        # Project settings
+│   ├── settings.py        # Project settings (DB, apps, configs)
 │   ├── urls.py            # Main URL routing
 │   ├── wsgi.py
 │
-├── screenshots/           # README images
+├── screenshots/           # API screenshots for README
 │   ├── 1_api_root.png
 │   ├── 2_create_train.png
 │   ├── 3_get_all_trains.png
@@ -138,9 +138,12 @@ trainServices/
 │   ├── 8_delete_train.png
 │   ├── 9_overbooking_validation.png
 │
+├── .dockerignore
 ├── .gitignore
-├── manage.py
-├── README.md
+├── Dockerfile             # Docker configuration
+├── manage.py              # Django entry point
+├── README.md              # Project documentation
+├── requirements.txt       # Python dependencies
 ```
 ## 🔗 API Endpoints
 
