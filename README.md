@@ -1,8 +1,5 @@
 # 🚆 Train Reservation System (Backend API)
 
-**🌐 Live Application:**
-http://18.61.157.201:8000/trainServices/
-
 ## 📌 Project Overview
 
 This project is a backend system built using **Django** and **Django REST Framework** that simulates a real-world train reservation system.
