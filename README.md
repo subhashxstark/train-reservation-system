@@ -16,7 +16,7 @@ The main focus of this project is to implement **real-time seat tracking, valida
 
 > **Note:** Hosted on **AWS EC2** using **Docker**, **Gunicorn**, and **PostgreSQL**.
 
-
+---
 ## ⚙️ Key Features
 
 * 🔍 Search trains based on source, destination, and departure date
