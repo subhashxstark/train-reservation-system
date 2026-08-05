@@ -10,6 +10,13 @@ The main focus of this project is to implement **real-time seat tracking, valida
 
 ---
 
+## 🌐 Live Application
+
+**🔗 Live Demo:** http://3.108.236.170:8001/trainServices/
+
+> **Note:** Hosted on **AWS EC2** using **Docker**, **Gunicorn**, and **PostgreSQL**.
+
+
 ## ⚙️ Key Features
 
 * 🔍 Search trains based on source, destination, and departure date
